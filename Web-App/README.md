@@ -61,16 +61,6 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 > 
 > $ docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
-## AWS Setup & Deployment
-
-### Prerequisites
-
-### Installation
-
-### Deployment 
-
-### Usage
-
 ## Features in Progress
 
 ### Grabcut Inference
@@ -79,9 +69,12 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 ### Custom Model Training
 - Adding in functionality to allow an user to train a model using their own custom dataset to provide a specialized inference predictor for their individual needs
 
+### Public Hosting
+- Working on finding a cost-effective way to host the web app publicly
+
 ## Authors
 - Jacob Lorenz: https://github.com/TheExplorativeBadger
-- Sarun Sreenivasan: https://github.com/VarunSreenivasan16/
+- Varun Sreenivasan: https://github.com/VarunSreenivasan16
 - Sean (Yun-Shiuan) Chuang: https://github.com/yunshiuan
 
 ## Credits
