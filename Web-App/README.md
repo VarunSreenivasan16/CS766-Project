@@ -74,9 +74,17 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 ## Features in Progress
 
 ### Grabcut Inference
+- Adding in functionality to use Grab-Cut inference to provide user feedback on inference performance
 
 ### Custom Model Training
+- Adding in functionality to allow an user to train a model using their own custom dataset to provide a specialized inference predictor for their individual needs
 
 ## Authors
+- Jacob Lorenz: https://github.com/TheExplorativeBadger
+- Sarun Sreenivasan: https://github.com/VarunSreenivasan16/
+- Sean (Yun-Shiuan) Chuang: https://github.com/yunshiuan
 
 ## Credits
+- Detectron2: 
+    - https://github.com/facebookresearch/detectron2
+    - https://ai.facebook.com/tools/detectron2/
