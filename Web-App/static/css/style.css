@@ -1,0 +1,352 @@
+ body {
+    background-color: black;
+ }
+
+ h1 {
+     color: white;
+ }
+
+ .container {
+    min-width: 993px;
+    max-width: 1750px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+ }
+
+ .hide {
+    display: none;
+}
+
+#Main_Navbar {
+    background-color: black;
+    border-bottom: 1px solid white;
+    /*height: 60px;*/
+}
+
+#Main_Toggler {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(234, 204, 4, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#NavbarBrandHeader {
+    color: rgba(234, 204, 4, 1)
+}
+
+.nav-item {
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom-color: white;
+}
+
+#NavItemM1 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+#NavItemM2 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+}
+
+#NavItemM3 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+}
+
+#NavItemM4 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+}
+
+#NavItemM5 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+}
+
+#NavItemM6 {
+    /*border-bottom-color: white;*/
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.ImageBox {
+    width: 480px;
+    height: 640px;
+    border: 1 px solid white;
+    margin: 0 auto;
+    background: black;
+}
+
+#AlertMessageBox {
+    color: black;
+    border: 2px solid white;
+    border-top: none;
+    border-bottom: none;
+}
+
+#Container1 {
+    border: 1px solid purple;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+}
+
+#AboutDescription {
+    color:rgba(234, 204, 4, 1);
+}
+
+#Container2 {
+    display: none;
+    border: 1px solid purple;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+}
+
+#C2R3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#StandardImageOutput_initial {
+    display: none;
+}
+
+#StandardImageOutput_processed {
+    display: none;
+}
+
+#StandardImportImageDescription {
+    color: rgba(234, 204, 4, 1);
+}
+
+#StandardImageUploadFile {
+    color:rgba(234, 204, 4, 1);
+}
+
+#StandardProcessingModelSelectDescription {
+    color:rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#StandardProcessingModelSelect {
+    display: none;
+}
+
+#StandardImageUploadDescription {
+    margin-top: 8px;
+    color:rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#StandardImageUploadButton {
+    display: none;
+    margin-top: 5px;
+}
+
+#StandardProcessedImageDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#SaveStandardProcessedImageButton {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#ClearStandardButtonDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#ClearStandardButton {
+    display: none;
+}
+
+
+
+#Container3 {
+    display: none;
+    border: 1px solid purple;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+}
+
+#C3R3 {
+    margin-top: 30px;
+}
+#C3R4 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#C3R3C2 {
+    display: inline-block;
+    position:relative; 
+}
+
+/* #GrabcutImageOutput_initial {
+    display: none;
+} */
+
+#GrabcutImageOutput_processed {
+    display: none;
+}
+
+#GrabcutImportImageDescription {
+    color: rgba(234, 204, 4, 1);
+}
+
+#GrabcutImageUploadFile {
+    color:rgba(234, 204, 4, 1);
+}
+
+#GrabcutModeSelectDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#GrabcutModeSelect {
+    display: none;
+}
+
+#CanvasBackgroundImage {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+#GrabcutModificationCanvas {
+    position: relative;
+    z-index: 20;
+}
+
+#GrabcutOptionSelect {
+    display: none;
+}
+
+#ClearInstructions {
+    margin-top: 8px;
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#ClearGrabcutCanvasButton {
+    display: none;
+}
+
+#GrabcutProcessImageDescription {
+    margin-top: 8px;
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#GrabcutImageUploadButton {
+    display: none;
+    margin-top: 5px;
+}
+
+#GrabcutProcessedImageDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#GrabcutInstructions {
+    display: none;
+    color: rgba(234, 204, 4, 1);
+}
+
+#SaveGrabcutProcessedImageButton {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#ClearGrabcutButtonDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#ClearGrabcutButton {
+    display: none;
+}
+
+#Container4 {
+    display: none;
+    border: 1px solid purple;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+}
+
+#C4R2 {
+    margin-bottom: 20px;
+}
+
+#C4R3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#BatchImageImportDescription {
+    color: rgba(234, 204, 4, 1);
+}
+
+#BatchImageUploadDirectory {
+    color:rgba(234, 204, 4, 1);
+}
+
+#BatchProcessingModelSelectDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#BatchProcessingModelSelect {
+    display: none;
+}
+
+#BatchImageUploadDescription {
+    color: rgba(234, 204, 4, 1);
+    display: none;
+}
+
+#BatchImageUploadButton {
+    display: none;
+    margin-top: 5px;
+}
+
+#Container5 {
+    display: none;
+    border: 1px solid purple;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+}
+
+/*
+#Container6 {
+    display: none;
+    border: 1px solid purple;
+    border-top: none;
+    margin-top: 20px;
+    max-width: 1400px;
+    min-width: 1250px;
+} */

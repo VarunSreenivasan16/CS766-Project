@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=.97, maximum-scale=1" />
+    <title>Instance Segmentation</title>
+    <!-- Bootstrap Core CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+    <!-- JQuery UI CSS -->
+    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"/> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.min.css') }}"/>
+    <!-- Custom CSS -->
+    <!-- <link rel='stylesheet' href='css/style.css'> -->
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}">    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="Main_Navbar">
+        <!-- Brand -->
+        <a class="navbar-brand">
+            <h3 id="NavbarBrandHeader">Instance Segmentation</h3>
+        </a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar_M">
+            <span class="navbar-toggler-icon" id="Main_Toggler"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar_M">
+            <ul class="navbar-nav">
+                <li class="nav-item" id="NavItemM1">
+                    <a class="nav-link" id="button_m1">About</a>
+                </li>
+                <li class="nav-item" id="NavItemM2">
+                    <a class="nav-link" id="button_m2">Standard</a>
+                </li>
+                <li class="nav-item" id="NavItemM3">
+                    <a class="nav-link" id="button_m3">Grab-Cut</a>
+                </li>
+                <li class="nav-item" id="NavItemM4">
+                    <a class="nav-link" id="button_m4">Batch</a>
+                </li>
+                <li class="nav-item" id="NavItemM5">
+                    <a class="nav-link" id="button_m5">Credits</a>
+                </li>
+                <!-- <li class="nav-item" id="NavItemM6">
+                    <a class="nav-link" id="button_m6">6</a>
+                </li>  -->
+            </ul>
+        </div>
+    </nav>
+
+    <div id="AlertMessageBox" title="Info">
+        <p>
+            <span id="AlertMessageBoxText"></span>
+        </p>
+    </div>
+
+    <div class="container" id="Container1">
+        <div class="row" id="C1R1">
+            <h1>About the App</h1>
+        </div>
+        <div class="row" id="C1R2">
+            <div class="col-md-6" id="C1R2C1">
+                <p id="AboutDescription">
+                    <b>Welcome!</b> Instance segmentation is a computer vision method based on neural networks used to identify the bounding box and identification of objects in an image or video.
+                    This web-app provides an interactive way to have your own images processed with the detectron2 Mask R-CNN model in a few different ways.
+                    </br>
+                    </br>
+                    <b>Standard</b> - The Standard tab allows you to use (1) of your own images in standard instance segmentation, which means the image will be processed on models trained suing various datasets depending on which option you select.
+                    </br>
+                    Currently we offer 5 different models to use: <b>Generic</b>, <b>Marine</b>, <b>City</b>, <b>Nature</b>, <b>Micro-Controller</b>.
+                    </br>
+                    </br>
+                    This method does not allow for user feedback about the objects in the image.
+                    </br>
+                    </br>
+                    <b>Grab-Cut</b> - The Grab-Cut tab allows you to use (1) of your own images in instance segmentation; however, it also allows you to give the model hints about the foreground and background regions
+                    in your image to help the model better identify and bound the objects of interest.
+                    </br>
+                    </br>
+                    <b>Batch</b> - The Batch tab allows you to upload a directory containing 1 or more images to be processed via standard instance segmentation. A zip file containing your processed images will be downloaded
+                    after image processing is complete.
+                </p>
+            </div>
+            <div class="col-md-6" id="C1R2C2">
+                <!-- Insert images of the detectron 2 model templates here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="Container2">
+        <div class="row" id="C2R1">
+            <h1>Standard Instance Segmentation</h1>
+        </div>
+        <div class="row" id="C2R2">
+            <div class="col-md-5" id="C2R2C1">
+                <p id="StandardImportImageDescription">
+                    Start by selecting an image to use for standard instance segmentation. 
+                </p>
+                <form id="StandardImageUploadForm" name="StandardImageUploadForm">
+                    <input type="file" name="StandardImageUploadFile" id="StandardImageUploadFile" accept="image/*" />
+                </form>
+                </br>
+                <p id="StandardProcessingModelSelectDescription">
+                    Next, choose from the following models to use for particular object types:
+                    </br>
+                    </br>
+                    <b>Generic</b> - This mode provides the largest detection range for common objects
+                    </br>
+                    <b>Marine</b> - Detect marine animals such as fish, crab, starfish and marine waste such as bottles, nets, and wreckage
+                    </br>
+                    <b>City</b> - A mode for users who want to perform instance segmentation on urban street scenes
+                    </br>
+                    <b>Nature</b> - For those who love squirrels and butterflies
+                    </br>
+                    <b>Balloon</b> - A mode for performing instance segmentation on frames involving balloons
+                    </br>
+                    <b>Micro-Controller</b> - Can be used for frames containing popular micro-controllers like Arduinos
+                </p>
+                <select id="StandardProcessingModelSelect">
+                    <option value="generic" selected="selected">Generic</option>
+                    <option value="marine">Marine</option>
+                    <option value="city">City</option>
+                    <option value="nature">Nature</option>
+                    <option value="balloon">Balloon</option>
+                    <option value="micro-controller">Micro-Controller</option>
+                </select>
+                </br>
+                <p id="StandardImageUploadDescription">
+                    Use the 'Process' button below to use the chosen model on your image. 
+                </p>
+                <input class="btn" type="button" id="StandardImageUploadButton" value="Process" />
+            </div>
+            <div class="col-md-7" id="C2R2C2">
+                <div class="ImageBox">
+                    <img src="" id="StandardImageOutput_initial" width="480" height="640">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="C2R3">
+            <div class="col-md-5" id="C2R3C1">
+                <p id="StandardProcessedImageDescription">
+                    Use the 'Save' button below to download the processed image. If there are objects in your image which did not get detected, please try using the Grab-Cut
+                    tab to give the app a hint!
+                </p>
+                <input class="btn" type="button" id="SaveStandardProcessedImageButton" value="Save" />
+                </br>
+                <p id="ClearStandardButtonDescription">
+                    Use the reset button to clear the image and start fresh.
+                </p>
+                <input class="btn" type="Button" id="ClearStandardButton" value="Reset" />
+            </div>
+            <div class="col-md-7" id="C2R3C2">
+                <div class="ImageBox">
+                    <img src="" id="StandardImageOutput_processed" width="480" height="640">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="Container3">
+        <div class="row" id="C3R1">
+            <h1>Grab-Cut Instance Segmentation</h1>
+        </div>
+        <div class="row" id="C3R2">
+            <div class="col-md-5" id="C3R2C1">
+                <p id="GrabcutImportImageDescription">
+                    Start by selecting an image to use for Grab-Cut instance segmentation. 
+                </p>
+                <form id="GrabcutImageUploadForm" name="GrabcutImageUploadForm">
+                    <input type="file" name="GrabcutImageUploadFile" id="GrabcutImageUploadFile" accept="image/*" />
+                    </br>
+                </form>
+                <p id="GrabcutModeSelectDescription">
+                    Next, select the mode of Grab-Cut you would like to use:
+                    </br>
+                    1) <b>Basic</b> - Starts the Grab-Cut feedback process without any prior inference on your image
+                    </br>
+                    2) <b>Advanced</b>  - Starts the Grab-Cut feedback process by using standard Mask R-CNN inference first
+                    </p>
+                <select id="GrabcutModeSelect" name="GrabcutModeSelect">
+                    <option value="0" selected="selected">Basic</option>
+                    <option value="1">Advanced</option>
+                </select>
+            </div>
+            <!-- <div class="col-md-7" id="C3R2C2">
+                <div class="ImageBox">
+                    <img src="" id="GrabcutImageOutput_initial" width="480" height="640">
+                </div>
+            </div> -->
+        </div>
+        <div class="row" id="C3R3">
+            <div class="col-md-5" id="C3R3C1">
+                <p id="GrabcutInstructions">
+                    You now have the opportunity to highlight areas of interest / disinterest on your image to give the model a hint on objects you want it to recognize vs ignore.
+                    </br>
+                    1) <b>Foreground</b> - Highlight areas of interest that you would like the model to focus on
+                    </br>
+                    2) <b>Background</b>  - Highlight areas that you would like the model to ignore
+                </p>
+                <select id="GrabcutOptionSelect">
+                    <option value="0" selected="selected">Bounding Box</option>
+                    <option value="1">Foreground</option>
+                    <option value="2">Background</option>
+                </select>
+                </br>
+                <p id="ClearInstructions">
+                    If you would like to clear your current highlights, use the 'Clear' button below.
+                </p>
+                <input class="btn" type="button" id="ClearGrabcutCanvasButton" value="Clear" />
+                </br>
+                <p id="GrabcutProcessImageDescription">
+                    When you are satisfied with your highlights, use the 'Process' button below to generate the processed version of your image
+                    with the highlights taken into consideration. You will have the option to save the image once processing is complete.
+                </p>
+                <input class="btn" type="button" id="GrabcutImageUploadButton" value="Process" />
+                </b>
+                <p id="ClearGrabcutButtonDescription">
+                    Use the reset button to clear the image and start fresh with a new Grab-Cut session
+                </p>
+                <input class="btn" type="Button" id="ClearGrabcutButton" value="Reset" />
+            </div>
+            <div class="col-md-7" id="C3R3C2">
+                <img id="CanvasBackgroundImage" src="" width="480" height="640"/>
+                <canvas id="GrabcutModificationCanvas" width="480" height="640"></canvas>
+            </div>
+        </div>
+        <div class="row" id="C3R4">
+            <div class="col-md-5" id="C3R4C1">
+                <p id="GrabcutProcessedImageDescription">
+                    Use the 'Save' button below to download the processed image.
+                </p>
+                <input class="btn" type="button" id="SaveGrabcutProcessedImageButton" value="Save" />
+            </div>
+            <div class="col-md-7" id="C3R4C2">
+                <div class="ImageBox">
+                    <img src="" id="GrabcutImageOutput_processed" width="480" height="640">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="Container4">
+        <div class="row" id="C4R1">
+            <h1>Standard Instance Segmentation - Batch Processing</h1>
+        </div>
+        <div class="row" id="C4R2">
+            <div class="col-md-5" id="C4R2C1">
+                <p id="BatchImageImportDescription">
+                    The batch processing tool is used to perform standard instance segmentation on a directory of images. Please put all jpeg and png images 
+                    you would like processed by a common model into a directory and select the directory below.
+                </p>
+                <form id="BatchImageUploadForm" name="BatchImageUploadForm">
+                    <input type="file" name="BatchImageUploadDirectory" id="BatchImageUploadDirectory" accept="image/*" multiple webkitdirectory directory/>
+                </form>
+                </br>
+                <p id="BatchProcessingModelSelectDescription">
+                    Next, choose from the following models to use for particular object types:
+                    </br>
+                    </br>
+                    <b>Generic</b> - This mode provides the largest detection range for common objects
+                    </br>
+                    <b>Marine</b> - Detect marine animals such as fish, crab, starfish and marine waste such as bottles, nets, and wreckage
+                    </br>
+                    <b>City</b> - A mode for users who want to perform instance segmentation on urban street scenes
+                    </br>
+                    <b>Nature</b> - For those who love squirrels and butterflies
+                    </br>
+                    <b>Balloon</b> - A mode for performing instance segmentation on frames involving balloons
+                    </br>
+                    <b>Micro-Controller</b> - Can be used for frames containing popular micro-controllers like Arduinos
+                </p>
+                <select id="BatchProcessingModelSelect">
+                    <option value="generic" selected="selected">Generic</option>
+                    <option value="marine">Marine</option>
+                    <option value="city">City</option>
+                    <option value="nature">Nature</option>
+                    <option value="balloon">Balloon</option>
+                    <option value="micro-controller">Micro-Controller</option>
+                </select>
+                </br>
+                </br>
+                <p id="BatchImageUploadDescription">
+                    Finally, use the 'Process' button to use the selected model on your directory of images. A zip file containing the processed images will be downloaded once processing is complete.
+                </p>
+                <input class="btn" type="button" id="BatchImageUploadButton" value="Process" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="Container5"> 
+        <div class="row" id="C5R1">
+            <h1>Credits</h1>
+        </div>
+    </div> 
+
+    <!-- <div class="container" id="Container6">
+        <div class="row" id="C6R1">
+            <h1>Container 6</h1>
+        </div>
+    </div> -->
+
+    <!-- Bootstrap, jQuery, and Core Javascript
+    ===============================================
+    At the end of the document so the page loads faster -->
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/jszip.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/FileSaver.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

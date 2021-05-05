@@ -1,0 +1,8 @@
+{
+    "flask": {
+        "image": ":__SERVICE_NAME__.__CONTAINER_NAME__.__VERSION__",
+        "ports": {
+            "8080": "HTTP"
+        }
+    }
+}
