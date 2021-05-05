@@ -6,7 +6,7 @@ An interactive computer vision web app that wraps Detectron2's Mask R-CNN for in
 
 The app's backend is built using python and provides a web server hosted with python's flask framework.
 
-The frontend is built using a standard DHTML tech stack including HTML, CSS, JavaScript
+The frontend is built using a standard DHTML tech stack including HTML, CSS, JavaScript and libraries such as jQuery and Bootstrap.
 
 ## Local Setup & Deployment
 
@@ -43,15 +43,23 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 
 1. After pulling the repo and building the docker image, deploy the container locally with
 
-> docker run --name=detectron2_container -p 8080:8080 -e PYTHONUNBUFFERED=1 -d detectron2-webapp
+> $ docker run --name=detectron2_container -p 8080:8080 -e PYTHONUNBUFFERED=1 -d detectron2-webapp
 
 2. To view the logs of the server-side requests and processing, run
 
-> docker logs -f -t $(docker ps -a -q)
+> $ docker logs -f -t $(docker ps -a -q)
 
 ### Use
 
 1. The container and app should now be deployed locally, navigate to localhost:8080 in your browser (Chrome recommended) to begin processing your own images!
+
+### Teardown
+
+1. When you are done using the app locally, it is good practice to deactive the docker containers to save space on performance on your machine. Run the following to stop the running containers and remove them from active context
+
+> $ docker stop $(docker ps -a -q)
+> 
+> $ docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ## AWS Setup & Deployment
 
