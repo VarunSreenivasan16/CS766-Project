@@ -31,6 +31,8 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 > 
 >$ git pull https://github.com/VarunSreenivasan16/CS766-Project.git
 
+* NOTE: If you get errors related to cloning the repo, it is likely due to file size issues, despite the LFS extension. Please go to the 'exclude-datasets' branch and follow the installation instructions in that README to get around this issue if you are facing it.
+
 2. Change your working directory to the Web-App directory
 > $ cd Web-App
 
