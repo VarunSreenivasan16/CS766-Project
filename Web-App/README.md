@@ -34,7 +34,11 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 2. Change your working directory to the Web-App directory
 > $ cd Web-App
 
-3. Build the docker image, which will bundle all dependencies into the hosting container
+3. Go to ___ and download the 'modes' directry containing the datasets needed for the models
+
+4. Unpackage the 'modes' directory zip file and put the entire 'modes' directory in the root of the Web-App directory
+
+5. Build the docker image, which will bundle all dependencies into the hosting container
 > $ docker build . -f Dockerfile -t detectron2-webapp
 
 * Note: If you get error while building the image, the likely cause is a memory shortage within the container. You can fix this by adjusting the docker Preferences > Resources > Memory. At the time of submission, I have my preferences set to 15 GB and the container is building properly.
