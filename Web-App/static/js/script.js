@@ -820,7 +820,7 @@ $(document).ready(function() {
         $("#Container2").hide("fast");
         $("#Container3").hide("fast");
         $("#Container4").hide("fast");
-        $("#Container5").hide("fast");
+        // $("#Container5").hide("fast");
         // $("#Container6").hide("fast");
 
         $("#Container1").show("fast");
@@ -829,7 +829,7 @@ $(document).ready(function() {
         $("#NavItemM2").css("border-bottom-style", "none");
         $("#NavItemM3").css("border-bottom-style", "none");
         $("#NavItemM4").css("border-bottom-style", "none");
-        $("#NavItemM5").css("border-bottom-style", "none");
+        // $("#NavItemM5").css("border-bottom-style", "none");
         // $("#NavItemM6").css("border-bottom-style", "none");
 
         document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
@@ -839,7 +839,7 @@ $(document).ready(function() {
         $("#Container1").hide("fast");
         $("#Container3").hide("fast");
         $("#Container4").hide("fast");
-        $("#Container5").hide("fast");
+        // $("#Container5").hide("fast");
         // $("#Container6").hide("fast");
 
         $("#Container2").show("fast");
@@ -848,7 +848,7 @@ $(document).ready(function() {
         $("#NavItemM2").css("border-bottom-style", "solid");
         $("#NavItemM3").css("border-bottom-style", "none");
         $("#NavItemM4").css("border-bottom-style", "none");
-        $("#NavItemM5").css("border-bottom-style", "none");
+        // $("#NavItemM5").css("border-bottom-style", "none");
         // $("#NavItemM6").css("border-bottom-style", "none");
 
         document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
@@ -858,7 +858,7 @@ $(document).ready(function() {
         $("#Container1").hide("fast");
         $("#Container2").hide("fast");
         $("#Container4").hide("fast");
-        $("#Container5").hide("fast");
+        // $("#Container5").hide("fast");
         // $("#Container6").hide("fast");
 
         $("#Container3").show("fast");
@@ -867,7 +867,7 @@ $(document).ready(function() {
         $("#NavItemM2").css("border-bottom-style", "none");
         $("#NavItemM3").css("border-bottom-style", "solid");
         $("#NavItemM4").css("border-bottom-style", "none");
-        $("#NavItemM5").css("border-bottom-style", "none");
+        // $("#NavItemM5").css("border-bottom-style", "none");
         // $("#NavItemM6").css("border-bottom-style", "none");
 
         document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
@@ -877,7 +877,7 @@ $(document).ready(function() {
         $("#Container1").hide("fast");
         $("#Container2").hide("fast");
         $("#Container3").hide("fast");
-        $("#Container5").hide("fast");
+        // $("#Container5").hide("fast");
         // $("#Container6").hide("fast");
 
         $("#Container4").show("fast");
@@ -886,30 +886,30 @@ $(document).ready(function() {
         $("#NavItemM2").css("border-bottom-style", "none");
         $("#NavItemM3").css("border-bottom-style", "none");
         $("#NavItemM4").css("border-bottom-style", "solid");
-        $("#NavItemM5").css("border-bottom-style", "none");
+        // $("#NavItemM5").css("border-bottom-style", "none");
         // $("#NavItemM6").css("border-bottom-style", "none");
 
         document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
     });
 
-    $("#button_m5").click(function() {
-        $("#Container1").hide("fast");
-        $("#Container2").hide("fast");
-        $("#Container3").hide("fast");
-        $("#Container4").hide("fast");
-        // $("#Container6").hide("fast");
+    // $("#button_m5").click(function() {
+    //     $("#Container1").hide("fast");
+    //     $("#Container2").hide("fast");
+    //     $("#Container3").hide("fast");
+    //     $("#Container4").hide("fast");
+    //     // $("#Container6").hide("fast");
 
-        $("#Container5").show("fast");
+    //     $("#Container5").show("fast");
 
-        $("#NavItemM1").css("border-bottom-style", "none");
-        $("#NavItemM2").css("border-bottom-style", "none");
-        $("#NavItemM3").css("border-bottom-style", "none");
-        $("#NavItemM4").css("border-bottom-style", "none");
-        $("#NavItemM5").css("border-bottom-style", "solid");
-        // $("#NavItemM6").css("border-bottom-style", "none");
+    //     $("#NavItemM1").css("border-bottom-style", "none");
+    //     $("#NavItemM2").css("border-bottom-style", "none");
+    //     $("#NavItemM3").css("border-bottom-style", "none");
+    //     $("#NavItemM4").css("border-bottom-style", "none");
+    //     $("#NavItemM5").css("border-bottom-style", "solid");
+    //     // $("#NavItemM6").css("border-bottom-style", "none");
 
-        document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
-    });
+    //     document.getElementById("collapsibleNavbar_M").className = "navbar-collapse justify-content-start collapse";
+    // });
 
     // $("#button_m6").click(function() {
     //     $("#Container1").hide("fast");

@@ -40,9 +40,9 @@
                 <li class="nav-item" id="NavItemM4">
                     <a class="nav-link" id="button_m4">Batch</a>
                 </li>
-                <li class="nav-item" id="NavItemM5">
+                <!-- <li class="nav-item" id="NavItemM5">
                     <a class="nav-link" id="button_m5">Credits</a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item" id="NavItemM6">
                     <a class="nav-link" id="button_m6">6</a>
                 </li>  -->
@@ -69,14 +69,14 @@
                     </br>
                     <b>Standard</b> - The Standard tab allows you to use (1) of your own images in standard instance segmentation, which means the image will be processed on models trained suing various datasets depending on which option you select.
                     </br>
-                    Currently we offer 5 different models to use: <b>Generic</b>, <b>Marine</b>, <b>City</b>, <b>Nature</b>, <b>Micro-Controller</b>.
+                    Currently we offer 6 different models to use: <b>Generic</b>, <b>Marine</b>, <b>City</b>, <b>Nature</b>, <b>Micro-Controller</b>, and <b>Balloons</b>.
                     </br>
                     </br>
                     This method does not allow for user feedback about the objects in the image.
                     </br>
                     </br>
-                    <b>Grab-Cut</b> - The Grab-Cut tab allows you to use (1) of your own images in instance segmentation; however, it also allows you to give the model hints about the foreground and background regions
-                    in your image to help the model better identify and bound the objects of interest.
+                    <b>Grab-Cut (Work In Progress)</b> - The Grab-Cut tab will allow you to use (1) of your own images in instance segmentation; however, it also will allow you to give the model hints about the foreground and background regions
+                    in your image to help the model better identify and bound the objects of interest. The feature is not entirely complete yet, but will be soon.
                     </br>
                     </br>
                     <b>Batch</b> - The Batch tab allows you to upload a directory containing 1 or more images to be processed via standard instance segmentation. A zip file containing your processed images will be downloaded
@@ -161,7 +161,7 @@
 
     <div class="container" id="Container3">
         <div class="row" id="C3R1">
-            <h1>Grab-Cut Instance Segmentation</h1>
+            <h1>Grab-Cut Instance Segmentation - NOTE: WORK IN PROGRESS</h1>
         </div>
         <div class="row" id="C3R2">
             <div class="col-md-5" id="C3R2C1">
@@ -213,8 +213,10 @@
                 <p id="GrabcutProcessImageDescription">
                     When you are satisfied with your highlights, use the 'Process' button below to generate the processed version of your image
                     with the highlights taken into consideration. You will have the option to save the image once processing is complete.
+
+                    NOTE: This feature is currently in development, check back for updates in the coming days / weeks.
                 </p>
-                <input class="btn" type="button" id="GrabcutImageUploadButton" value="Process" />
+                <input class="btn" type="button" id="GrabcutImageUploadButton" value="Process" disabled/>
                 </b>
                 <p id="ClearGrabcutButtonDescription">
                     Use the reset button to clear the image and start fresh with a new Grab-Cut session
@@ -289,11 +291,11 @@
         </div>
     </div>
 
-    <div class="container" id="Container5"> 
+    <!-- <div class="container" id="Container5"> 
         <div class="row" id="C5R1">
             <h1>Credits</h1>
         </div>
-    </div> 
+    </div>  -->
 
     <!-- <div class="container" id="Container6">
         <div class="row" id="C6R1">
