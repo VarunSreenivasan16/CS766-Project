@@ -36,7 +36,7 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 
 3. Go to https://drive.google.com/drive/u/2/folders/1LXMf4o7Rc7gAvdLE33N4U-HRdIRFSKAA. You will be in the 'modes' directory. Download the 'modes' directry containing the datasets needed for the models.
 
-4. Unpackage the 'modes' directory zip file and put the entire 'modes' directory in the root of the Web-App directory
+4. Unpackage the 'modes' directory zip file and put the entire 'modes' directory in the root of the Web-App directory. Sometimes the download comes in more than 1 part due to size, if this is the case, please place the relevant sub-directories downloaded second in the correct mode's directory structure. For example, if the 'Model' sub-directory for TrashCan downloads separately, placee the 'Model' sub-directory within the 'modes/TrashCan/' directory.
 
 5. Build the docker image, which will bundle all dependencies into the hosting container
 > $ docker build . -f Dockerfile -t detectron2-webapp
