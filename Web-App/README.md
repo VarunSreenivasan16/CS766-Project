@@ -34,7 +34,7 @@ After installing the prerequisites, follow the steps below to Build, Deploy, and
 2. Change your working directory to the Web-App directory
 > $ cd Web-App
 
-3. Go to ___ and download the 'modes' directry containing the datasets needed for the models
+3. Go to https://drive.google.com/drive/u/2/folders/1LXMf4o7Rc7gAvdLE33N4U-HRdIRFSKAA. You will be in the 'modes' directory. Download the 'modes' directry containing the datasets needed for the models.
 
 4. Unpackage the 'modes' directory zip file and put the entire 'modes' directory in the root of the Web-App directory
 
